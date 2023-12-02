@@ -24,7 +24,8 @@
     </div>
     <div>
       <div class="detail-title">Type</div>
-      <div class="detail-value">{{ characterDetails.type }}</div>
+      <div *ngIf="characterDetails.type !== ''; else noType" class="detail-value">{{ characterDetails.type }}</div>
+      <ng-template #noType class="detail-value">-</ng-template>
     </div>
     <div>
       <div class="detail-title">Gender</div>
