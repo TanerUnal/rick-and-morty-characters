@@ -22,7 +22,7 @@ export class CharacterService {
     return this.http.get<ApiResponseCharacters>(`${ this.url }/character${ queryParams }`);
   }
 
-  public getCharacterDetails(id: number): Observable<CharacterDetails> {
+  public getCharacterDetails(id: string): Observable<CharacterDetails> {
     return this.http.get<CharacterDetails>(`${ this.url }/character/${ id }`);
   }
 }

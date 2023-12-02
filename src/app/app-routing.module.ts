@@ -12,12 +12,19 @@ const routes: Routes = [
     path: 'characters',
     loadChildren: () =>
       import('./pages/characters-page/characters-page.module').then(m => m.CharactersPageModule),
-    title: route => 'Rick and Morty Characters API' + (route.queryParams['q'] ? ' | Query Results for: ' + route.queryParams['q'] : '')
+    title: route => 'Rick and Morty Characters API' + (route.queryParams['status'] || route.queryParams['gender'] ? ' | Query Results' : '')
   },
+  {
+    path: 'characters/:id',
+    loadChildren: () =>
+      import('./pages/character-details-page/character-details-page.module').then(m => m.CharacterDetailsPageModule),
+    title: route => 'Rick and Morty Characters API - Details for Character with ID: ' + route.params['id']
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

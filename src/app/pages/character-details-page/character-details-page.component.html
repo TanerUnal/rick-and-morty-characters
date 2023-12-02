@@ -1,0 +1,50 @@
+<a routerLink=".." queryParamsHandling="preserve">
+  <div class="go-back-btn">
+    <div class="back-btn-icon"><span class="material-symbols-outlined">chevron_left</span></div>
+    <div>Back to the list</div>
+  </div>
+</a>
+<div *ngIf="characterDetails" class="char-details-wrapper">
+  <div class="char-presentation">
+    <img [src]="characterDetails.image" [alt]="'Avatar image for ' + characterDetails.name" class="char-avatar"/>
+    <div class="char-name"><h1>{{ characterDetails.name }}</h1></div>
+  </div>
+  <div class="char-details">
+    <div>
+      <div class="detail-title">ID</div>
+      <div class="detail-value">{{ characterDetails.id }}</div>
+    </div>
+    <div>
+      <div class="detail-title">Status</div>
+      <div class="detail-value">{{ characterDetails.status }}</div>
+    </div>
+    <div>
+      <div class="detail-title">Species</div>
+      <div class="detail-value">{{ characterDetails.species }}</div>
+    </div>
+    <div>
+      <div class="detail-title">Type</div>
+      <div class="detail-value">{{ characterDetails.type }}</div>
+    </div>
+    <div>
+      <div class="detail-title">Gender</div>
+      <div class="detail-value">{{ characterDetails.gender }}</div>
+    </div>
+    <div>
+      <div class="detail-title">Origin</div>
+      <div class="detail-value">{{ characterDetails.origin.name }}</div>
+    </div>
+    <div>
+      <div class="detail-title">Location</div>
+      <div class="detail-value">{{ characterDetails.location.name }}</div>
+    </div>
+    <div>
+      <div class="detail-title">Creation Date</div>
+      <div class="detail-value">{{ characterDetails.created }}</div>
+    </div>
+    <div class="no-border-bottom">
+      <div class="detail-title">Episodes</div>
+      <div class="detail-value">{{ getEpisodesString(characterDetails.episode) }}</div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,4 @@
-<a *ngFor="let character of characters" class="character" [routerLink]="'/characters/'+ character.id">
+<a *ngFor="let character of characters" class="character" [routerLink]="'/characters/'+ character.id"
+   queryParamsHandling="preserve">
   <app-character [charInfo]="character"></app-character>
 </a>
