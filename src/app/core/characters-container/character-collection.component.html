@@ -2,3 +2,5 @@
    queryParamsHandling="preserve">
   <app-character [charInfo]="character"></app-character>
 </a>
+<div *ngFor="let _ of [].constructor(characters.length % 4)" class="character invisible">
+</div>
