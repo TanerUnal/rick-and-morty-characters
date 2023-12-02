@@ -28,6 +28,8 @@ export class CharactersPageComponent implements OnInit {
         if (params['p']) {
           this.page = Number(params['p']);
         }
+        this.queryParams.p = this.page;
+        
         if (params['gender']) {
           this.queryParams.gender = params['gender'];
         }
@@ -35,7 +37,7 @@ export class CharactersPageComponent implements OnInit {
           this.queryParams.status = params['status'];
         }
 
-        return this.characterService.getCharacters(this.page);
+        return this.characterService.getCharacters(...Object.values(this.queryParams));
       })
     ).subscribe(collection => {
       this.characters = collection.results;
