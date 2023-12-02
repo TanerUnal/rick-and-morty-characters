@@ -1,0 +1,83 @@
+.char-container {
+  color: #EAEAEA;
+  position: relative;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .char-info-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 9px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 49.32%, rgba(0, 0, 0, 0.48) 72.5%);
+
+    .char-id {
+      display: flex;
+      flex-direction: row-reverse;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      font-size: 28px;
+      color: #FFFFFF;
+    }
+
+    .char-bottom-info {
+      display: flex;
+      justify-content: space-between;
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 4px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        color: #FAFAFA;
+      }
+
+      .char-side-info {
+        display: flex;
+        align-items: flex-end;
+        column-gap: 4px;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+// INDICATOR ICONS
+
+.Alive {
+  text-shadow: 0 0 3px #000000;
+  color: #f52f2f;
+}
+
+.Dead {
+  text-shadow: 0 0 3px #000000;
+  color: #FFFFFF;
+}
+
+.Male {
+  text-shadow: 0 0 2px #093439;
+  color: #5acced;
+}
+
+.Female {
+  text-shadow: 0 0 2px #630e2b;
+  color: #ff7ba8;
+}
+
+.Genderless {
+  text-shadow: 0 0 2px #444435;
+  color: #f3f39d;
+}

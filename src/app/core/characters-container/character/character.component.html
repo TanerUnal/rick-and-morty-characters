@@ -1,0 +1,18 @@
+<div *ngIf="charInfo" class="char-container">
+  <img [src]="charInfo.image" [alt]="'Avatar for ' + charInfo.name"/>
+  <div class="char-info-overlay">
+    <div class="char-id"> #{{ charInfo.id }} </div>
+    <div class="char-bottom-info">
+      <div>
+        <h2> {{ charInfo.name }} </h2>
+        <div class="char-species" title="species"> {{ charInfo.species }} </div>
+      </div>
+      <div class="char-side-info">
+        <span *ngIf="charInfo.status !== 'unknown'" class="material-symbols-outlined" [title]="charInfo.status"
+              [ngClass]="charInfo.status">{{ statusIcons[charInfo.status] }}</span>
+        <span *ngIf="charInfo.gender !== 'unknown'" class="material-symbols-outlined" [title]="charInfo.gender"
+              [ngClass]="charInfo.gender">{{ genderIcons[charInfo.gender] }}</span>
+      </div>
+    </div>
+  </div>
+</div>

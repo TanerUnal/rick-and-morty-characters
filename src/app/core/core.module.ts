@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { CharactersContainerModule } from "./characters-container/characters-container.module";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HeaderComponent } from './header/header.component';
     FooterComponent
   ],
   imports: [
-    RouterModule
+    RouterModule,
+    CharactersContainerModule
   ],
   providers: []
 })

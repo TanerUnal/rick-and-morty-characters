@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 16px;
+  justify-content: space-between;
+  margin: 0 10vw;
+}
+
+.character {
+  min-height: 180px;
+  min-width: 180px;
+  flex: 0 1 calc(25% - 12px);
+}
