@@ -3,6 +3,7 @@ import { CharacterService } from "../../services/character/character.service";
 import { Character, CharacterGender, CharacterStatus } from "../../models/character";
 import { switchMap } from "rxjs";
 import { ActivatedRoute } from '@angular/router';
+import { QueryParams } from "../../models/query-params";
 
 @Component({
   selector: 'app-characters-page',
@@ -13,9 +14,10 @@ export class CharactersPageComponent implements OnInit {
 
   public characters: Character[] = [];
 
-  public page?: number;
-  public queryStatus?: CharacterStatus;
-  public queryGender?: CharacterGender;
+  public page: number = 1;
+
+  public lastPage: number = 1;
+  public queryParams: QueryParams = {};
 
   constructor(private characterService: CharacterService, private route: ActivatedRoute) {
   }
@@ -23,16 +25,21 @@ export class CharactersPageComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.pipe(
       switchMap(params => {
-        this.page = params['p'];
-        this.queryGender = params['gender'];
-        this.queryStatus = params['status'];
+        if (params['p']) {
+          this.page = Number(params['p']);
+        }
+        if (params['gender']) {
+          this.queryParams.gender = params['gender'];
+        }
+        if (params['status']) {
+          this.queryParams.status = params['status'];
+        }
 
         return this.characterService.getCharacters(this.page);
       })
     ).subscribe(collection => {
       this.characters = collection.results;
-      // read/use entry count and page count here if needed
-      // collection.info ...
+      this.lastPage = Number(collection.info.pages);
     });
   }
 }

@@ -1,0 +1,20 @@
+<div class="paginator">
+  <a class="nav-btn" routerLink="/characters" [queryParams]="getQueryParams(1)" [class.disabled]="currentPage === 1">
+    <span class="material-symbols-outlined">first_page</span>
+  </a>
+  <a class="nav-btn" routerLink="/characters" [queryParams]="getQueryParams(currentPage - 1)"
+     [class.disabled]="currentPage === 1">
+    <span class="material-symbols-outlined previous-icon">chevron_left</span>
+  </a>
+  <div class="current">
+    {{ currentPage }}
+  </div>
+  <a class="nav-btn" routerLink="/characters" [queryParams]="getQueryParams(currentPage + 1)"
+     [class.disabled]="currentPage === lastPage">
+    <span class="material-symbols-outlined next-icon">chevron_right</span>
+  </a>
+  <a class="nav-btn" routerLink="/characters" [queryParams]="getQueryParams(lastPage)"
+     [class.disabled]="currentPage === lastPage">
+    <span class="material-symbols-outlined">last_page</span>
+  </a>
+</div>

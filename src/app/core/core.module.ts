@@ -3,15 +3,18 @@ import { RouterModule } from "@angular/router";
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CharactersContainerModule } from "./characters-container/characters-container.module";
+import { PaginatorComponent } from './paginator/paginator.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    PaginatorComponent
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PaginatorComponent
   ],
   imports: [
     RouterModule,
