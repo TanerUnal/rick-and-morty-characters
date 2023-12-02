@@ -17,7 +17,7 @@ export class CharacterService {
 
   public getCharacters(page?: number, gender?: CharacterGender,
                        status?: CharacterStatus): Observable<ApiResponseCharacters> {
-    const queryParams = '?' + (page ? `page=${ page }` : '') + (gender ? `gender=${ gender }` : '') + (status ? `status=${ status }` : '');
+    const queryParams = '?' + (page ? `page=${ page }` : '') + (gender ? `&gender=${ gender }` : '') + (status ? `&status=${ status }` : '');
 
     return this.http.get<ApiResponseCharacters>(`${ this.url }/character${ queryParams }`);
   }
