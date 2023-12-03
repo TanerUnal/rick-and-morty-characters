@@ -37,7 +37,7 @@ export class CharactersPageComponent implements OnInit {
           this.queryParams.status = params['status'];
         }
 
-        return this.characterService.getCharacters(...Object.values(this.queryParams));
+        return this.characterService.getCharacters(this.queryParams);
       })
     ).subscribe(collection => {
       this.characters = collection.results;
