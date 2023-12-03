@@ -1,3 +1,5 @@
+@import 'src/assets/variables';
+
 .filter-wrapper {
   display: flex;
   align-items: flex-start;
@@ -22,6 +24,38 @@
     .filter {
       fieldset {
         border: none;
+
+        .choices {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+
+          label {
+            cursor: pointer;
+            display: inline-flex;
+
+            input {
+              appearance: none;
+
+              border-radius: 50%;
+              width: 16px;
+              height: 16px;
+
+              background-color: transparent;
+              border: 2px solid map-get($palette, light);
+              transition: 0.2s all linear;
+              margin-right: 5px;
+
+              cursor: pointer;
+
+              &:checked {
+                border: 3px solid white;
+                background-color: map-get($palette, soft-dark-magenta);
+              }
+            }
+          }
+        }
+
       }
     }
   }
