@@ -15,10 +15,12 @@ Run `npm run start` or `ng serve` for a dev server. Navigate to http://localhost
 automatically reload if you
 change any of the source files.
 
-## Node Version and Tests
+## Node Version
 
 The node version used during development was **18.16.0**.
 There also shouldn't be a problem with node version 16 (it isn't tested.)
+
+## Tests
 
 Tests were **not** in the scope of the task description; therefore they were not implemented.
 But Jest packages are included in `package.json` and Jest is set correctly.
@@ -54,6 +56,8 @@ at [Milestone-5](https://github.com/TanerUnal/rick-and-morty-characters/mileston
 - **Filter design** with checkbox could be some dropdown menu which lists checkboxes when clicked. So the filter won't
   occupy much space. And it's a better design decision when there is many filters.
 - **Responsiveness**...
+- **Paginator** could be more complex with smart indexing.
+- On **mouse hover** the character pictures can be zoomed in.
 
 ## Final Notes
 
