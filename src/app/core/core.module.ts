@@ -4,17 +4,20 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CharactersContainerModule } from "./characters-container/characters-container.module";
 import { PaginatorComponent } from './paginator/paginator.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    FilterComponent
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    FilterComponent
   ],
   imports: [
     RouterModule,

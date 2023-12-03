@@ -1,0 +1,28 @@
+.filter-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 12px 10vw;
+
+  .filter-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .filter {
+      fieldset {
+        border: none;
+      }
+    }
+  }
+}

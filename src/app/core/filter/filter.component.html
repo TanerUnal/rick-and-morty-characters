@@ -1,0 +1,48 @@
+<div class="filter-wrapper">
+  <div class="filter-title">
+    <span class="material-symbols-outlined">tune</span>
+    <h2>FILTERS:</h2>
+  </div>
+  <div class="filters">
+    <div class="filter">
+      <fieldset>
+        <legend>STATUS</legend>
+        <div>
+          <input type="radio" id="statusChoice1" name="status" value="Alive" (click)="filter('status', 'Alive')"
+                 [checked]="queryParams.status === 'Alive'"/>
+          <label for="statusChoice1">alive</label>
+
+          <input type="radio" id="statusChoice2" name="status" value="Dead" (click)="filter('status', 'Dead')"
+                 [checked]="queryParams.status === 'Dead'"/>
+          <label for="statusChoice2">dead</label>
+
+          <input type="radio" id="statusChoice3" name="status" value="unknown" (click)="filter('status', 'unknown')"
+                 [checked]="queryParams.status === 'unknown'"/>
+          <label for="statusChoice3">unknown</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="filter">
+      <fieldset>
+        <legend>GENDER</legend>
+        <div>
+          <input type="radio" id="genderChoice1" name="gender" value="Male" (click)="filter('gender', 'Male')"
+                 [checked]="queryParams.gender === 'Male'"/>
+          <label for="genderChoice1">male</label>
+
+          <input type="radio" id="genderChoice2" name="gender" value="Female" (click)="filter('gender', 'Female')"
+                 [checked]="queryParams.gender === 'Female'"/>
+          <label for="genderChoice2">female</label>
+
+          <input type="radio" id="genderChoice3" name="gender" value="Genderless"
+                 (click)="filter('gender', 'Genderless')" [checked]="queryParams.gender === 'Genderless'"/>
+          <label for="genderChoice3">genderless</label>
+
+          <input type="radio" id="genderChoice4" name="gender" value="unknown" (click)="filter('gender', 'unknown')"
+                 [checked]="queryParams.gender === 'unknown'"/>
+          <label for="genderChoice4">unknown</label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
