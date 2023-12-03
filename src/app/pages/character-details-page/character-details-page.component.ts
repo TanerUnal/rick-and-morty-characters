@@ -21,7 +21,6 @@ export class CharacterDetailsPageComponent implements OnInit {
       try {
         this.characterService.getCharacterDetails(charId).subscribe(details => {
           this.characterDetails = details;
-          console.log(this.characterDetails);
         });
       } catch (e) {
         console.error(e);
