@@ -19,6 +19,6 @@ export class PaginatorComponent {
   public queryParams: QueryParams = {};
 
   public getQueryParams(targetPage: number | undefined): QueryParams {
-    return {...this.queryParams, p: targetPage ? targetPage : 1};
+    return {...this.queryParams, page: targetPage ? targetPage : 1};
   }
 }

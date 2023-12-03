@@ -25,11 +25,11 @@ export class CharactersPageComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.pipe(
       switchMap(params => {
-        if (params['p']) {
-          this.page = Number(params['p']);
+        if (params['page']) {
+          this.page = Number(params['page']);
         }
-        this.queryParams.p = this.page;
-        
+        this.queryParams.page = this.page;
+
         if (params['gender']) {
           this.queryParams.gender = params['gender'];
         }
