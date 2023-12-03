@@ -18,7 +18,7 @@ export class CharacterService {
   public getCharacters(queryParams: QueryParams): Observable<ApiResponseCharacters> {
     const queryParamArray: string[] = [];
     Object.keys(queryParams).map(queryParam => {
-      queryParamArray.push(`${ queryParam }=${ queryParams[(queryParam as 'page' | 'gender' | 'status')] }`);
+      queryParamArray.push(`${ queryParam }=${ queryParams[(queryParam as keyof QueryParams)] }`);
     });
     const query = `?${ queryParamArray.join('&') }`;
 
