@@ -10,10 +10,10 @@ export class PaginatorComponent {
   public firstPage = 1;
 
   @Input()
-  public lastPage: number = 1;
+  public lastPage = 1;
 
   @Input()
-  public currentPage: number = 1;
+  public currentPage = 1;
 
   @Input()
   public queryParams: QueryParams = {};

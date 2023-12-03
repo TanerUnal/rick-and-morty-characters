@@ -30,7 +30,7 @@ export class CharacterDetailsPageComponent implements OnInit {
   }
 
   public getEpisodesString(episodeUrls: string[]): string {
-    let episodes: string[] = [];
+    const episodes: string[] = [];
 
     episodeUrls.map(episode => {
       const match = episode.match('episode\\/(\\d+)');

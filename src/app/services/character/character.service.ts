@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { ApiResponseCharacters } from "../../models/api-response-characters";
-import { CharacterGender, CharacterStatus } from "../../models/character";
 import { CharacterDetails } from "../../models/character-details";
 import { QueryParams } from "../../models/query-params";
 
@@ -17,7 +16,7 @@ export class CharacterService {
   }
 
   public getCharacters(queryParams: QueryParams): Observable<ApiResponseCharacters> {
-    let queryParamArray: string[] = [];
+    const queryParamArray: string[] = [];
     Object.keys(queryParams).map(queryParam => {
       queryParamArray.push(`${ queryParam }=${ queryParams[(queryParam as 'page' | 'gender' | 'status')] }`);
     });

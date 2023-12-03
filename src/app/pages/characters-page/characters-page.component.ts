@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CharacterService } from "../../services/character/character.service";
-import { Character, CharacterGender, CharacterStatus } from "../../models/character";
+import { Character } from "../../models/character";
 import { switchMap } from "rxjs";
 import { ActivatedRoute } from '@angular/router';
 import { QueryParams } from "../../models/query-params";
@@ -14,9 +14,9 @@ export class CharactersPageComponent implements OnInit {
 
   public characters: Character[] = [];
 
-  public page: number = 1;
+  public page = 1;
 
-  public lastPage: number = 1;
+  public lastPage = 1;
   public queryParams: QueryParams = {};
 
   constructor(private characterService: CharacterService, private route: ActivatedRoute) {
