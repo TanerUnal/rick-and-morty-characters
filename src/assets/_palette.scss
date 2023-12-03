@@ -1,0 +1,26 @@
+// not the ideal palette organisation but enough for this project's scope
+
+$palette: (
+  white: #FFFFFF,
+  light: #FAFAFA,
+  gray: (
+    base: #EAEAEA,
+    dark: #5E5E5E
+  ),
+  dark: #000000,
+  black: #000000,
+  soft-dark-magenta: #C0084B,
+  red: #F52F2F,
+  teal: (
+    base: #5ACCED,
+    dark: #093439
+  ),
+  pink: (
+    base: #FF7BA8,
+    dark: #630E2B
+  ),
+  yellow: (
+    base: #f3f39d,
+    dark: #444435
+  )
+)

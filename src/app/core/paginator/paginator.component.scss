@@ -1,8 +1,10 @@
+@import 'src/assets/variables';
+
 @mixin nav-element {
   border-radius: 50%;
   aspect-ratio: 1;
   width: 48px;
-  color: #FAFAFA;
+  color: map-get($palette, light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,13 +18,13 @@
 
   .current {
     @include nav-element;
-    background-color: #C0084B;
+    background-color: map-get($palette, soft-dark-magenta);
     cursor: default;
   }
 
   .nav-btn {
     @include nav-element;
-    border: 1px solid #C0084B;
+    border: 1px solid map-get($palette, soft-dark-magenta);
 
     span {
       &.previous-icon {
@@ -35,12 +37,12 @@
     }
 
     &:hover {
-      border-color: #FFFFFF;
+      border-color: map-get($palette, white);
     }
 
     &.disabled {
-      border-color: #5e5e5e;
-      color: #5e5e5e;
+      border-color: map-get(map-get($palette, gray), dark);
+      color: map-get(map-get($palette, gray), dark);
     }
   }
 }

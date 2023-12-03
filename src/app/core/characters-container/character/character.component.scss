@@ -1,5 +1,7 @@
+@import 'src/assets/variables';
+
 .char-container {
-  color: #EAEAEA;
+  color: map-get(map-get($palette, gray), base);
   position: relative;
   display: flex;
   width: fit-content;
@@ -30,7 +32,7 @@
       display: flex;
       flex-direction: row-reverse;
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      color: #FFFFFF;
+      color: map-get($palette, white);
     }
 
     .char-bottom-info {
@@ -41,7 +43,7 @@
         margin-top: 0;
         margin-bottom: 4px;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        color: #FAFAFA;
+        color: map-get($palette, light);
       }
 
       .char-side-info {
@@ -56,26 +58,26 @@
 // INDICATOR ICONS
 
 .Alive {
-  text-shadow: 0 0 3px #000000;
-  color: #f52f2f;
+  text-shadow: 0 0 3px map-get($palette, black);
+  color: map-get($palette, red);
 }
 
 .Dead {
-  text-shadow: 0 0 3px #000000;
-  color: #FFFFFF;
+  text-shadow: 0 0 3px map-get($palette, black);
+  color: map-get($palette, white);
 }
 
 .Male {
-  text-shadow: 0 0 2px #093439;
-  color: #5acced;
+  text-shadow: 0 0 2px map-get(map-get($palette, teal), dark);
+  color: map-get(map-get($palette, teal), base);
 }
 
 .Female {
-  text-shadow: 0 0 2px #630e2b;
-  color: #ff7ba8;
+  text-shadow: 0 0 2px map-get(map-get($palette, pink), dark);
+  color: map-get(map-get($palette, pink), base);
 }
 
 .Genderless {
-  text-shadow: 0 0 2px #444435;
-  color: #f3f39d;
+  text-shadow: 0 0 2px map-get(map-get($palette, yellow), dark);
+  color: map-get(map-get($palette, yellow), base);
 }

@@ -1,7 +1,9 @@
+@import 'src/assets/variables';
+
 a {
   display: block;
   width: fit-content;
-  color: #FAFAFA;
+  color: map-get($palette, light);
   margin: 8px 0 12px;
 
   &:hover {
@@ -22,7 +24,7 @@ a {
 
 .char-details-wrapper {
   margin: 0 10vw;
-
+  
   .char-presentation {
     position: relative;
     box-shadow: 0 4px 4px 0 #00000040;
@@ -49,7 +51,7 @@ a {
 
       h1 {
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        color: #FAFAFA;
+        color: map-get($palette, light);
         margin: 0 0 16px;
       }
     }
@@ -75,7 +77,7 @@ a {
     }
 
     .detail-value {
-      color: white;
+      color: map-get($palette, white);
       padding-left: 8px;
     }
   }

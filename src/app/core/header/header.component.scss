@@ -1,3 +1,5 @@
+@import 'src/assets/variables';
+
 :host {
   display: flex;
   height: 48px;
@@ -18,6 +20,6 @@
   }
 
   h1 {
-    color: #FAFAFA;
+    color: map-get($palette, light);
   }
 }
