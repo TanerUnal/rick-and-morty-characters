@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from "@angular/router";
 import { QueryParams } from "../../models/query-params";
+import { charGenderOptions, charStatusOptions } from "../../models/character";
 
 @Component({
   selector: 'app-filter',
@@ -8,6 +9,9 @@ import { QueryParams } from "../../models/query-params";
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent {
+  public readonly statusOptions: string[] = charStatusOptions;
+  public readonly genderOptions: string[] = charGenderOptions;
+
   @Input()
   public queryParams: QueryParams = {};
 

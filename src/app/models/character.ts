@@ -9,3 +9,6 @@ export interface Character {
   image: string;
   species: string;
 }
+
+export const charStatusOptions = ['Alive', 'Dead', 'unknown'];
+export const charGenderOptions = ['Female', 'Male', 'Genderless', 'unknown'];

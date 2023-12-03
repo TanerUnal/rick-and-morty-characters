@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { CharactersContainerModule } from "./characters-container/characters-container.module";
 import { PaginatorComponent } from './paginator/paginator.component';
 import { FilterComponent } from './filter/filter.component';
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -19,10 +20,11 @@ import { FilterComponent } from './filter/filter.component';
     PaginatorComponent,
     FilterComponent
   ],
-  imports: [
-    RouterModule,
-    CharactersContainerModule
-  ],
+    imports: [
+        RouterModule,
+        CharactersContainerModule,
+        CommonModule
+    ],
   providers: []
 })
 export class CoreModule {

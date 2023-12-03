@@ -8,22 +8,10 @@
       <fieldset>
         <legend>STATUS</legend>
         <div class="choices">
-          <label>
-            <input type="radio" name="status" value="Alive" (click)="filter('status', 'Alive')"
-                   [checked]="queryParams.status === 'Alive'"/>
-            alive
-          </label>
-
-          <label>
-            <input type="radio" name="status" value="Dead" (click)="filter('status', 'Dead')"
-                   [checked]="queryParams.status === 'Dead'"/>
-            dead
-          </label>
-
-          <label>
-            <input type="radio" name="status" value="unknown" (click)="filter('status', 'unknown')"
-                   [checked]="queryParams.status === 'unknown'"/>
-            unknown
+          <label *ngFor="let status of statusOptions">
+            <input type="radio" name="status" [value]="status" (click)="filter('status', status)"
+                   [checked]="queryParams.status === status"/>
+            {{ status | lowercase }}
           </label>
         </div>
       </fieldset>
@@ -32,28 +20,10 @@
       <fieldset>
         <legend>GENDER</legend>
         <div class="choices">
-          <label>
-            <input type="radio" name="gender" value="Male" (click)="filter('gender', 'Male')"
-                   [checked]="queryParams.gender === 'Male'"/>
-            male
-          </label>
-
-          <label>
-            <input type="radio" name="gender" value="Female" (click)="filter('gender', 'Female')"
-                   [checked]="queryParams.gender === 'Female'"/>
-            female
-          </label>
-
-          <label>
-            <input type="radio" name="gender" value="Genderless"
-                   (click)="filter('gender', 'Genderless')" [checked]="queryParams.gender === 'Genderless'"/>
-            genderless
-          </label>
-
-          <label>
-            <input type="radio" name="gender" value="unknown" (click)="filter('gender', 'unknown')"
-                   [checked]="queryParams.gender === 'unknown'"/>
-            unknown
+          <label *ngFor="let gender of genderOptions">
+            <input type="radio" name="gender" [value]="gender" (click)="filter('gender', gender)"
+                   [checked]="queryParams.gender === gender"/>
+            {{ gender | lowercase }}
           </label>
         </div>
       </fieldset>
